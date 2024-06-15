@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'inter';
+    src: url(Inter-VariableFont_slnt\,wght.ttf);
+    format: (truetype);
+    font-display:swap;
+    font-weight:100 900;
+}
+
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+img,
+svg,
+canvas{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.banner{
+    background-image: url(img/bg1.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    animation-name: animate-bg ;
+    animation-duration:15s ;
+    animation-timing-function:linear ;
+    animation-iteration-count:infinite ;
+}
+@keyframes animate-bg {
+    0%{
+        background-image: url(img/bg1.jpg);
+    }
+
+    20%{
+        background-image: url(img/bg2.jpg);
+    }
+
+    40%{
+        background-image: url(img/bg3.jpg);
+    }
+
+    60%{
+        background-image: url(img/bg4.jpg);
+    }
+
+    80%{
+        background-image: url(img/bg5.jpg);
+    }
+
+
+
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.banner{
+    width:100%;
+    height:100svh;
+    text-align:center;
+    overflow:hidden;
+    position:relative;
+}
+
+.slider{
+    position:absolute;
+    width:120px;
+    height:170px;
+    top:20%;
+    left:calc(50% - 60px);
+    transform-style:preserve-3d;
+    transform:perspective(1000px);
+    animation: autorun 20s linear infinite;
+}
+
+@keyframes autorun{
+    from{
+        transform: perspective(1000px) rotateX(-15deg) rotateY(0deg);
+    }
+
+    to{
+        transform: perspective(1000px) rotateX(-15deg)  rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    position:absolute;
+    inset:0 0 0 0;
+    transform:
+        rotateY(calc( ( var(--POSITION) - 1) * (360/var(--QUANTITY) ) * 1deg)) 
+        translateZ(350px);
+}
+
+.banner .slider .item img:hover,
+.banner .slider .item img:focus{
+    scale:105%;
+    box-shadow: 0 0 5px 5px #fff;
+}
+
+.banner .slider .item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.naming{
+    position:absolute;
+    bottom: 10%;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    text-align: left;
+    gap:0.5rem;
+    flex-flow: column nowrap;
+    width:fit-content;
+    padding:1rem;
+    font-family:'inter';
+    color:#fff;
+    margin-inline:0.2rem;
+}
+
+.naming > h2{
+    font-weight: 900;
+    font-size:3rem;
+    color:transparent;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.5px;
+}
