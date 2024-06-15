@@ -1,5 +1,5 @@
 # 3D ANIMATION
-**This is an animation which I created for fun not much interation due to the limitaion of using only CSS.**
+This is an animation which I created for fun. Although, there is not much interation due to the limitaion of using only CSS.
 
 ##Table Of Content
 - [Screenshot](#screenshot)
