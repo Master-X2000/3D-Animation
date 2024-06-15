@@ -2,12 +2,12 @@
 **This is an animation which I created for fun not much interation due to the limitaion of using only CSS.**
 
 ##Table Of Content
-- [Screenshot](#screensot)
+- [Screenshot](#screenshot)
 - [See Site](#Site)
 - [Author](#author)
   
-## Screensot
-    ![view](screenshot.jpg)
+## Screenshot
+  ![view](screenshot.jpg)
 
 ## Site
    - [live at](https://master-x2000.github.io/3D-Animation/)
